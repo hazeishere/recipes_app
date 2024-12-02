@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .error-container {
+            padding: 50px;
+        }
+        .error-container h1 {
+            font-size: 3em;
+        }
+        .error-container p {
+            font-size: 1.2em;
+        }
+        .error-container a {
+            color: #721c24;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>運氣太差啦！</h1>
+        <p>{{ error_message }}</p>
+        <p>已嘗試{{ count }}次</p>
+        <a href="/surprise_me">再試一次</a> |
+        <a href="/">返回主頁</a>
+    </div>
+</body>
+</html>

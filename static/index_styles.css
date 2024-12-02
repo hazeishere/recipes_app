@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    font-family: Arial, sans-serif; /* Optional: Add a clean font */
+}
+
+.container-title {
+    text-align: center;
+    margin-bottom: 20px; /* Adds space between title and nav */
+}
+
+.categories-nav {
+    display: flex;
+    flex-wrap: wrap; /* Ensures links wrap if necessary */
+    gap: 15px; /* Adds space between the links */
+    justify-content: center; /* Centers the links horizontally */
+}
+
+.categories-nav a {
+    text-decoration: none;
+    color: #333; /* Neutral color for the links */
+    font-size: 1.2rem; /* Adjust font size for readability */
+    padding: 8px 16px; /* Adds padding to links for better clickability */
+    border: 2px solid #333; /* Adds a border around each link */
+    border-radius: 5px; /* Rounds the edges of the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.categories-nav a:hover {
+    background-color: #333;
+    color: #fff; /* Inverts the text color on hover */
+}

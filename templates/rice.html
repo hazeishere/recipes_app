@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <script src="https://kit.fontawesome.com/d5ad16c434.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <h1><a href="/">Fooder</a></h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url }}" target="_blank">查看食譜</a></li>
+                <li><a href="#換一個" onclick="refreshPage()"><i class="fa-solid fa-arrows-rotate"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="recipe-container">
+        <div class="top-section">
+            <div class="recipe-header">
+                <img src="{{ img }}" alt="food_pic" class="recipe-image">
+            </div>
+            <section class="ingredients-section">
+                <div class="recipe-title">
+                    <h2>{{ title }}</h2>
+                    {% if num %}
+                        <p class="serving-size">{{ num }} 人份</p>
+                    {% endif %}
+                    
+                </div>
+                <h3>所需材料</h3>
+                <ol class="ingredients-list">
+                    {% for ingredient in ingredient_list %}
+                        <li class="ingredient-item">{{ ingredient }}</li>
+                    {% endfor %}
+                </ol>
+                {% if group1_name %}
+                    <h4 class="group-name-sub"><strong>{{ group1_name }}</strong></h4>
+                {% endif %} 
+                <ol class="ingredients-list">
+                        {% if group1_ingredients_list %}
+                            {% for group1_ingredient in group1_ingredients_list %}
+                                <li class="ingredient-item">{{ group1_ingredient }}</li>
+                            {% endfor %}
+                        {% endif %}
+                </ol>
+                {% if group2_name %}
+                    <h4 class="group-name-sub"><strong>{{ group2_name }}</strong></h4>
+                {% endif %} 
+                <ol class="ingredients-list">
+                        {% if group2_ingredients_list %}
+                            {% for group2_ingredient in group2_ingredients_list %}
+                                <li class="ingredient-item">{{ group2_ingredient }}</li>
+                            {% endfor %}
+                        {% endif %}
+                </ol>
+                {% if group3_name %}
+                    <h4 class="group-name-sub"><strong>{{ group3_name }}</strong></h4>
+                {% endif %}
+                <ol class="ingredients-list">
+                        {% if group3_ingredients_list %}
+                            {% for group3_ingredient in group3_ingredients_list %}
+                                <li class="ingredient-item">{{ group3_ingredient }}</li>
+                            {% endfor %}
+                        {% endif %}
+                </ol>
+                
+            </section>
+        </div>
+        <section class="steps-section">
+            <h3>步驟</h3>
+            {% if steps_data %}
+                <ol class="steps-list">
+                    {% for step in steps_data %}
+                        <li class="step-item">
+                            <p class="step-text">{{ step.text }}</p>
+                            {% if step.img %}
+                                <img src="{{ step.img }}" alt="Step Image" class="step-image">
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% else %}
+                <p class="no-steps">無</p>
+            {% endif %}
+        </section>
+    </div>
+
+
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
