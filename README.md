@@ -1,36 +1,40 @@
-# Recipes App
+# 食譜應用程式
 
-A simple web app that helps you discover new recipes when you're not sure what to cook!
+一個簡單的小網頁。
+「今晚吃什麼？」不再是難題，這個網頁像轉蛋機一樣，隨機送上你從沒想過的驚喜料理，一秒解救選擇困難症！
 
-## Features
+## 功能特色
 
-- Browse recipes by category:
-  - Rice dishes
-  - Noodle dishes
-  - Chicken dishes
-  - Beef dishes
-  - Pork dishes
-  - Egg dishes
-  - Soups
-  - Sweet dishes
-- "Surprise me" option for random recipe suggestions
+- 依類別瀏覽食譜：
+  - 米飯料理
+  - 麵食料理
+  - 雞肉料理
+  - 牛肉料理
+  - 豬肉料理
+  - 蛋類料理
+  - 湯品
+  - 甜點
+- 「給我驚喜」選項提供隨機食譜建議
 
-## How to Use
+## 頁面展示
+![preview](images/preview_recipe_img.jpg)
 
-1. Run the app with `python app.py`
-2. Open your browser to `http://localhost:5000`
-3. Click on any food category to find a recipe
-4. Get all the details you need:
-   - Recipe title and image
-   - Serving size
-   - Ingredients list
-   - Step-by-step cooking instructions
+## 使用方法
 
-## Requirements
+1. 執行應用程式：`python app.py`
+2. 在瀏覽器開啟 `http://localhost:5000`
+3. 點擊任何食物類別以尋找食譜
+4. 獲取所有你需要的詳細資訊：
+   - 食譜標題和圖片
+   - 份量
+   - 食材清單
+   - 步驟式烹飪說明
+
+## 系統需求
 
 - Python 3
 - Flask
 - BeautifulSoup4
 - Requests
 
-Have fun cooking! 🍳
+享受烹飪的樂趣！🍳
